@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Alarm Clock</title>
+	<meta charset="utf-8">
+    <meta name="description" content="Alarm Clock">
+    <meta name="keywords" content="alarm, clock">
+    <meta name="author" content="RubyLinux">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="alarmclock.css">
+</head>
+
+<body>
+
+	<div id="time">
+		<script language="javascript">
+		function updateClock() {
+    	var curTime = new Date(), 
+        time = curTime.getHours() + ':' + curTime.getMinutes() + ':' + curTime.getSeconds(), 
+		date = [curTime.getDate(), curTime.getMonth() + 1, curTime.getFullYear()].join(' ');
+		document.getElementById('time').innerHTML = [date, time].join(' / ');
+		setTimeout(updateClock, 1000);
+		}
+		updateClock(); 
+ 		</script>
+	</div>
+	
+	<form>
+		<div class="alarm-dialog">
+			<div id="time">
+				<h2>Set Alarm</h2>
+					<label class="hour">Hours
+						<input id="time1" type="number" value="0" min="0" max="23"/>
+					</label>
+
+					<label class="minute">Minutes
+						<input id="time2" type="number" value="0" min="0" max="59"/>
+					</label>
+
+				<div>
+					<script>
+					function set() {
+					var hr = document.getElementById("time1").value
+					var min = document.getElementById("time2").value
+					var time = new Date ()
+					var hr1 = time.getHours();
+					var min1 = time.getMinutes();
+					loop (hr1,min1,hr,min);
+					}
+					function loop(hr1,min1,hr,min){
+						if (hr1==hr && min1==min){
+							hr1 = null
+							min1 = null
+							alert("WAKE UP");
+						} else  { setTimeout(set,1000)}
+					}
+					</script>
+					
+					<input type="button" value="Set" onClick="set()"/> 
+					<input type="reset" value="Clear" onClick="this.form.reset()"/>
+
+				</div>
+			</div>
+		</div>
+	</form>
+	
+</body>
+
+</html>

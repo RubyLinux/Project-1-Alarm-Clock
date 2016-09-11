@@ -1,0 +1,16 @@
+body {background-color: #CED3DC; font-family: Courier ; text-align: center;}
+h2 {color: #5E2D79;}
+label {color: #5E2D79;}
+form {border-style: solid; border-width: 1px; border-color:#ABA9C3; background-color:#ABA9C3; width: 320px; margin: auto }
+input[type=button] {
+    padding:3px; 
+    border:2px solid #5E2D79; 
+    background-color: #CED3DC;
+    font-family: Courier ;
+}
+input[type=reset] {
+    padding:3px; 
+    border:2px solid #5E2D79; 
+    background-color: #CED3DC;
+    font-family: Courier ;
+}
