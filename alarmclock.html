@@ -4,10 +4,10 @@
 <head>
 	<title>Alarm Clock</title>
 	<meta charset="utf-8">
-    <meta name="description" content="Alarm Clock">
-    <meta name="keywords" content="alarm, clock">
-    <meta name="author" content="RubyLinux">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<meta name="description" content="Alarm Clock">
+    	<meta name="keywords" content="alarm, clock">
+    	<meta name="author" content="RubyLinux">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="alarmclock.css">
 </head>
 
@@ -15,14 +15,14 @@
 
 	<div id="time">
 		<script language="javascript">
-		function updateClock() {
-    	var curTime = new Date(), 
-        time = curTime.getHours() + ':' + curTime.getMinutes() + ':' + curTime.getSeconds(), 
-		date = [curTime.getDate(), curTime.getMonth() + 1, curTime.getFullYear()].join(' ');
-		document.getElementById('time').innerHTML = [date, time].join(' / ');
-		setTimeout(updateClock, 1000);
-		}
-		updateClock(); 
+			function updateClock() {
+    			var curTime = new Date(), 
+        		time = curTime.getHours() + ':' + curTime.getMinutes() + ':' + curTime.getSeconds(), 
+			date = [curTime.getDate(), curTime.getMonth() + 1, curTime.getFullYear()].join(' ');
+			document.getElementById('time').innerHTML = [date, time].join(' / ');
+			setTimeout(updateClock, 1000);
+			}
+			updateClock(); 
  		</script>
 	</div>
 	
